@@ -4,4 +4,4 @@ s = ""
 while (i < 123):
     s = s + chr(i)
     i = i + 1
-print("{}".format(s))
+print("{}".format(s), end="")
