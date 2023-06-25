@@ -5,6 +5,8 @@ def print_matrix_integer(matrix=[[]]):
         matrix: list of lists
     """
     i = 0
+    if len(matrix[0]) == 0:
+        print("")
     while i < len(matrix):
         j = 0
         while j < len(matrix[i]):
