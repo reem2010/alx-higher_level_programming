@@ -1,2 +1,2 @@
 #!/usr/bin/python3
-print("{:d}".format(int("reem")))
+print("{:d}".format(3 / 0))
