@@ -9,5 +9,4 @@ class Square:
     Methods:
         no methods
     """
-    def __init__(self):
-        """member of the class"""
+    pass
