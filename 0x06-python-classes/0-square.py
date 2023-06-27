@@ -6,5 +6,7 @@ class Square:
 
     Attributes:
         no attributes
+    Methods:
+        no methods
     """
     pass
