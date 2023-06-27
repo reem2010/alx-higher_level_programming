@@ -1,8 +1,9 @@
 #!/usr/bin/python3
-""" empty class square"""
+"""this file contain the square class"""
+
+
 class Square:
     """square class whth no arguments"""
     def __init__(self):
-        """object of class"""
         pass
     pass
