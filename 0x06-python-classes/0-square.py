@@ -2,4 +2,4 @@
 class Square:
     """square class"""
     def __init__(self):
-        pass
+        """no arguments"""
