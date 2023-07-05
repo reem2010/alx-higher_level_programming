@@ -32,3 +32,4 @@ try:
     print(matrix_divided())
 except Exception as e:
     print(e)
+print(matrix_divided([[3]],  float('inf')))
