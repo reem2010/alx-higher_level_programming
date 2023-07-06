@@ -1,35 +1,9 @@
 #!/usr/bin/python3
-matrix_divided = __import__('2-matrix_divided').matrix_divided
-matrix = [
-[1, 2, 3],
-[4, 5, 6]]
+say_my_name = __import__('3-say_my_name').say_my_name
 
-print(matrix_divided(matrix, 3))
-
-print(matrix_divided([[3]], 3))
-
+say_my_name("John", 3)
+say_my_name(3, "Smith")
 try:
-    print(matrix_divided([[3, 9], [12, 15]], 0))
+    say_my_name()
 except Exception as e:
     print(e)
-
-try:
-    print(matrix_divided([[3, 9], [12, 15, 3]], 3))
-except Exception as e:
-    print(e)
-
-try:
-    print(matrix_divided([[3, "9"], [15, 3]], 3))
-except Exception as e:
-    print(e)
-
-try:
-    print(matrix_divided([[3, 9], [15, 3]]))
-except Exception as e:
-    print(e)
-
-try:
-    print(matrix_divided())
-except Exception as e:
-    print(e)
-print(matrix_divided([[3]],  float('inf')))
