@@ -9,3 +9,7 @@ School?
 How are you:
 <BLANKLINE>
 John
+>>> text_indentation("Holberton.School")
+Holberton.
+<BLANKLINE>
+School
