@@ -1,3 +1,11 @@
 >>> text_indentation = __import__('5-text_indentation').text_indentation
 >>> text_indentation("test sentence")
 test sentence
+>>> text_indentation("Holberton. School? How are you: John")
+Holberton.
+<BLANKLINE>
+School?
+<BLANKLINE>
+How are you:
+<BLANKLINE>
+John
