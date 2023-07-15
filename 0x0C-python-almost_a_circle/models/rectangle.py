@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-import Base
+from models.base import Base
 """rectangle module"""
 
 
@@ -7,7 +7,8 @@ class Rectangle(Base):
     """rectangle class"""
 
     def __init__(self, width, height, x=0, y=0, id=None):
-        super().__init__()
+
+        super().__init__(id)
         self.width = width
         self.height = height
         self.x = x
@@ -41,7 +42,7 @@ class Rectangle(Base):
     def x_value(self):
         return self.__x
 
-    @x.setter
+    @x_value.setter
     def x_value(self, value):
         if type(value) != int:
             raise TypeError("x must be an integer")
@@ -53,11 +54,18 @@ class Rectangle(Base):
     def y_value(self):
         return self.__y
 
-    @y.setter
+    @y_value.setter
     def y_value(self, value):
         if type(value) != int:
             raise TypeError("y must be an integer")
         if value < 0:
             raise ValueError("y must be >= 0")
         self.__y = value
+
+    def area(self):
+        """tis function returns the area"""
+        return (self.__width * self.__height)
+
+
+
 
