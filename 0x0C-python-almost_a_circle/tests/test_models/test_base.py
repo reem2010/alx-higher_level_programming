@@ -8,6 +8,7 @@ class TestBase(unittest.TestCase):
 
 
     def test_base(self):
+        Base._Base__nb_objects = 0
         b1 = Base()
         self.assertEqual(b1.id, 1)
         b2 = Base()
@@ -16,3 +17,6 @@ class TestBase(unittest.TestCase):
         self.assertEqual(b3.id, 100)
         b4 = Base(None)
         self.assertEqual(b4.id, 3)
+
+if __name__ == '__main__':
+    unittest.main()

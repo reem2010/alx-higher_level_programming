@@ -39,11 +39,11 @@ class Rectangle(Base):
         self.__height = value
 
     @property
-    def x_value(self):
+    def x(self):
         return self.__x
 
-    @x_value.setter
-    def x_value(self, value):
+    @x.setter
+    def x(self, value):
         if type(value) != int:
             raise TypeError("x must be an integer")
         if value < 0:
@@ -51,11 +51,11 @@ class Rectangle(Base):
         self.__x = value
 
     @property
-    def y_value(self):
+    def y(self):
         return self.__y
 
-    @y_value.setter
-    def y_value(self, value):
+    @y.setter
+    def y(self, value):
         if type(value) != int:
             raise TypeError("y must be an integer")
         if value < 0:
@@ -66,6 +66,30 @@ class Rectangle(Base):
         """tis function returns the area"""
         return (self.__width * self.__height)
 
+    def display(self):
+        for i in range(self.__y):
+            print("\n", end="")
+        for i in range(self.__height):
+            for k in range(self.__x):
+                print(" ", end="")
+            for j in range(self.__width):
+                print("#", end="")
+                if j == self.__width - 1:
+                    print("\n", end="")
 
+    def __str__(self):
+        return (f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - {self.__width}/{self.__height}")
+    
+    def update(self, *args, **kwargs):
+        fun = ["id", "width", "height", "x", "y"]
+        i = 0
+        for ar in args:
+            arg = fun[i]
+            setattr(self, arg, ar)
+            i+=1
+        for key, value in kwargs.items():
+            setattr(self, key, value)
 
-
+    def to_dictionary(self):
+        dic = {'x': self.__x, 'y': self.__y, 'id': self.id, 'height': self.__height, 'width': self.__width}
+        return (dic)
