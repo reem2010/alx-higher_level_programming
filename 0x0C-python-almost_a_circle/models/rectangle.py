@@ -81,6 +81,7 @@ class Rectangle(Base):
                     print("\n", end="")
 
     def __str__(self):
+        """verriding the __str__ method"""
         return (f"[Rectangle] ({self.id}) {self.__x}/{self.__y}\
  - {self.__width}/{self.__height}")
     
