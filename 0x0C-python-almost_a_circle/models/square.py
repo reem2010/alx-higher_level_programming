@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-from models.rectangle import Rectangle
 """square module"""
+from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
@@ -27,6 +27,7 @@ class Square(Rectangle):
         self.height = value
 
     def update(self, *args, **kwargs):
+        """Update the class Square"""
         fun = ["id", "size", "x", "y"]
         i = 0
         for ar in args:
@@ -37,5 +38,6 @@ class Square(Rectangle):
             setattr(self, key, value)
 
     def to_dictionary(self):
+        """ returns the dictionary representation of a Square"""
         dic = {'id': self.id, 'x': self.x, 'size': self.height, 'y': self.y}
         return (dic)
