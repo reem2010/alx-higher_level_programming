@@ -38,6 +38,8 @@ class Base:
             file.write(out)
 
     def from_json_string(json_string):
+        """JSON string to dictionary"""
+
         out = []
         if json_string is None:
             return (out)
