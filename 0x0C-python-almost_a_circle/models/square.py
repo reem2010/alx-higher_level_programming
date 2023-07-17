@@ -30,12 +30,14 @@ class Square(Rectangle):
         """Update the class Square"""
         fun = ["id", "size", "x", "y"]
         i = 0
-        for ar in args:
-            arg = fun[i]
-            setattr(self, arg, ar)
-            i += 1
-        for key, value in kwargs.items():
-            setattr(self, key, value)
+        if (args is not None) and len(args) != 0:
+            for ar in args:
+                arg = fun[i]
+                setattr(self, arg, ar)
+                i += 1
+        else:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
 
     def to_dictionary(self):
         """ returns the dictionary representation of a Square"""
