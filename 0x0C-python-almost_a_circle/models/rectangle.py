@@ -94,7 +94,11 @@ class Rectangle(Base):
  - {self.__width}/{self.__height}")
 
     def update(self, *args, **kwargs):
-        """Update the class Rectangle"""
+        """Update the class Rectangle
+        Args:
+            *args: list of aruments
+            **kwargs: double pointer to a dictionary: key/value
+        """
 
         fun = ["id", "width", "height", "x", "y"]
         i = 0
