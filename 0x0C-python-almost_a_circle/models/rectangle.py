@@ -64,9 +64,12 @@ class Rectangle(Base):
 
     def area(self):
         """tis function returns the area"""
+
         return (self.__width * self.__height)
 
     def display(self):
+        """prints in stdout the Rectangle instance with the character #"""
+
         for i in range(self.__y):
             print("\n", end="")
         for i in range(self.__height):
@@ -82,6 +85,8 @@ class Rectangle(Base):
  - {self.__width}/{self.__height}")
     
     def update(self, *args, **kwargs):
+        """Update the class Rectangle"""
+
         fun = ["id", "width", "height", "x", "y"]
         i = 0
         for ar in args:
@@ -92,6 +97,8 @@ class Rectangle(Base):
             setattr(self, key, value)
 
     def to_dictionary(self):
+        """returns the dictionary representation of a Rectangle"""
+
         dic = {'x': self.__x, 'y': self.__y, 'id': self.id}
         dic.update({'height': self.__height, 'width': self.__width})
         return (dic)
