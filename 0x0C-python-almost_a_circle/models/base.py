@@ -38,7 +38,6 @@ class Base:
         with open(name, "w") as file:
             file.write(str(out))
 
-
     def from_json_string(json_string):
         """JSON string to dictionary"""
 
