@@ -48,7 +48,10 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
-        r = cls(1, 1)
+        if cls.__name__ == "Rectangle":
+            r = cls(1, 1)
+        else:
+            r = cls(1)
         r.update(**dictionary)
         return (r)
 
@@ -69,3 +72,15 @@ class Base:
             var = [cls.create(**i)]
             out1.extend(var)
         return (out1)
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        name = f"{cls.__name__}.csv"
+        out = []
+        if ((list_objs) is not None):
+            for obj in list_objs:
+                out.append(obj.to_dictionary())
+            with open(name, "w") as file:
+                return
+
+
