@@ -66,5 +66,6 @@ class Base:
             return ([])
         out = cls.from_json_string(file.read())
         for i in out:
-            print(cls.create(**i))
+            var = [cls.create(**i)]
+            out1.extend(var)
         return (out1)
