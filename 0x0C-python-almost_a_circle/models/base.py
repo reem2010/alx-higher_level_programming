@@ -51,6 +51,7 @@ class Base:
         r = cls(1, 1)
         r.update(**dictionary)
         return (r)
+
     @classmethod
     def load_from_file(cls):
         from models.rectangle import Rectangle
@@ -65,7 +66,5 @@ class Base:
             return ([])
         out = cls.from_json_string(file.read())
         for i in out:
-            
-            print( cls.create(**i))
+            print(cls.create(**i))
         return (out1)
-
