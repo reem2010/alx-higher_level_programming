@@ -110,7 +110,7 @@ class Rectangle(Base):
 
         fun = ["id", "width", "height", "x", "y"]
         i = 0
-        if (args is not None) or len(args) == 0:
+        if (args is not None) and len(args) != 0:
             for ar in args:
                 arg = fun[i]
                 setattr(self, arg, ar)
