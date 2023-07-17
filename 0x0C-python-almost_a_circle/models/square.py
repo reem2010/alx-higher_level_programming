@@ -32,10 +32,10 @@ class Square(Rectangle):
         for ar in args:
             arg = fun[i]
             setattr(self, arg, ar)
-            i+=1
+            i += 1
         for key, value in kwargs.items():
             setattr(self, key, value)
-    
+
     def to_dictionary(self):
-        dic = {'x': self.x, 'y': self.y, 'id': self.id, 'size': self.height}
+        dic = {'id': self.id, 'x': self.x, 'size': self.height, 'y': self.y}
         return (dic)

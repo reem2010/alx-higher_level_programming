@@ -92,7 +92,7 @@ class Rectangle(Base):
         """verriding the __str__ method"""
         return (f"[Rectangle] ({self.id}) {self.__x}/{self.__y}\
  - {self.__width}/{self.__height}")
-    
+
     def update(self, *args, **kwargs):
         """Update the class Rectangle"""
 
@@ -101,7 +101,7 @@ class Rectangle(Base):
         for ar in args:
             arg = fun[i]
             setattr(self, arg, ar)
-            i+=1
+            i += 1
         for key, value in kwargs.items():
             setattr(self, key, value)
 
