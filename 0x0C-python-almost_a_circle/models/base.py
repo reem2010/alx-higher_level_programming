@@ -15,6 +15,7 @@ class Base:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
 
+    @staticmethod
     def to_json_string(list_dictionaries):
         """Dictionary to JSON string"""
 
@@ -50,3 +51,21 @@ class Base:
         r = cls(1, 1)
         r.update(**dictionary)
         return (r)
+    @classmethod
+    def load_from_file(cls):
+        from models.rectangle import Rectangle
+        out1 = []
+        if cls is Rectangle:
+            name = "Rectangle.json"
+        else:
+            name = "Square.json"
+        try:
+            file = open(name, "r")
+        except Exception:
+            return ([])
+        out = cls.from_json_string(file.read())
+        for i in out:
+            
+            print( cls.create(**i))
+        return (out1)
+
