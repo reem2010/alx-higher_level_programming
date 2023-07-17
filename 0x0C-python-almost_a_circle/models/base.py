@@ -36,7 +36,8 @@ class Base:
                 out.append(obj.to_dictionary())
             out = cls.to_json_string(out)
         with open(name, "w") as file:
-            file.write(out)
+            file.write(str(out))
+
 
     def from_json_string(json_string):
         """JSON string to dictionary"""
