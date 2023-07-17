@@ -6,8 +6,8 @@ import json
 class Base:
     """base clase for all other classes"""
 
-
     __nb_objects = 0
+
     def __init__(self, id=None):
         if id is not None:
             self.id = id
@@ -17,7 +17,6 @@ class Base:
 
     def to_json_string(list_dictionaries):
         """Dictionary to JSON string"""
-
 
         if list_dictionaries is None or len(list_dictionaries) == 0:
             return ("[]")
