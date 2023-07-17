@@ -19,7 +19,7 @@ class Base:
         """Dictionary to JSON string"""
 
         if list_dictionaries is None or len(list_dictionaries) == 0:
-            return (json.dumps([]))
+            return ("[]")
         return (json.dumps(list_dictionaries))
 
     @classmethod
@@ -37,8 +37,8 @@ class Base:
         with open(name, "w") as file:
             file.write(out)
 
-    @classmethod
     def from_json_string(json_string):
         out = []
-        if json_string is not None:
-            return
+        if json_string is None:
+            return (out)
+        return (json.loads(json_string))
