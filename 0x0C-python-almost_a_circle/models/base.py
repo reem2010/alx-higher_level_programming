@@ -19,7 +19,7 @@ class Base:
         """Dictionary to JSON string"""
 
         if list_dictionaries is None or len(list_dictionaries) == 0:
-            return ("[]")
+            return (json.dumps([]))
         return (json.dumps(list_dictionaries))
 
     @classmethod
