@@ -82,5 +82,3 @@ class Base:
                 out.append(obj.to_dictionary())
             with open(name, "w") as file:
                 return
-
-
