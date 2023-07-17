@@ -68,5 +68,6 @@ class TestRectangle(unittest.TestCase):
     def test_Display(self):
         str_out = "  ##\n  ##\n  ##"
 
+
 if __name__ == '__main__':
     unittest.main()
