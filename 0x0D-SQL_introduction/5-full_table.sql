@@ -1,2 +1,3 @@
 -- Full description
-SELECT * FROM first_table;
+SELECT * FROM INFORMATION_SCHEMA.COLUMNS
+WHERE TABLE_NAME = first_table ;
