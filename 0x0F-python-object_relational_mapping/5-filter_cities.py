@@ -10,9 +10,8 @@ if __name__ == '__main__':
     port = 3306
     db = MySQLdb.connect(host, username, password, db_name, port)
     cursor = db.cursor()
-    query = "SELECT GROUP_CONCAT\
-            (cities.name ORDER BY cities.id ASC SEPARATOR ', ')\
-            FROM cities \
+    concat = "cities.name ORDER BY cities.id ASC SEPARATOR ', '"
+    query = f"SELECT GROUP_CONCAT({concat})FROM cities \
             WHERE cities.state_id = (SELECT states.id \
             FROM states WHERE states.name LIKE BINARY %s LIMIT 1) \
             "
