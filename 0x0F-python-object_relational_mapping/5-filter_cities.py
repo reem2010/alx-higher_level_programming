@@ -16,7 +16,11 @@ if __name__ == '__main__':
             "
     cursor.execute(query, (argv[4],))
     data = cursor.fetchall()
-    for i in data:
-        print(i[0])
+    if data[0][0] is not None:
+        print(data[0][0])
+    else:
+        print("")
+
+    
     cursor.close()
     db.close()
