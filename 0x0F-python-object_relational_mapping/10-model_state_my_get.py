@@ -15,7 +15,6 @@ if __name__ == "__main__":
     data = session.query(State).filter(State.name.like(f'{argv[4]}')).all()
 
     if data:
-        print(data)
         for i in data:
             print(f"{i.id}")
     else:
