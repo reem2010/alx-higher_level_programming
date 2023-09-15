@@ -10,7 +10,8 @@ if __name__ == '__main__':
     port = 3306
     db = MySQLdb.connect(host, username, password, db_name, port)
     cursor = db.cursor()
-    query = "SELECT * FROM states WHERE name = '{}' ORDER BY states.id ASC".format(argv[4])
+    query = "SELECT * FROM states WHERE name =\
+            '{}' ORDER BY states.id ASC".format(argv[4])
     cursor.execute(query)
     data = cursor.fetchall()
     for i in data:
