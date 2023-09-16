@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """Cities in state"""
-from  relationship_state import Base
+from relationship_state import Base
 from sqlalchemy import Column, Integer, String, ForeignKey
 
 
