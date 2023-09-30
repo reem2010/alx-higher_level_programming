@@ -6,7 +6,6 @@ import sys
 if __name__ == "__main__":
     with urlopen(sys.argv[1]) as response:
         try:
-            print(response.header.get("X-Request-Id"))
+            print(response.headers.get("X-Request-Id"))
         except Exception as e:
-            print("reem")
             pass
