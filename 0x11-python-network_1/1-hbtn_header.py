@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""script that fetches https://alx-intranet.hbtn.io/status"""
+"""sends a request to the URL and displays the value of the X-Request-Id"""
 from urllib.request import urlopen
 import sys
 
