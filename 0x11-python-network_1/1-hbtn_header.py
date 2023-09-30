@@ -8,4 +8,5 @@ if __name__ == "__main__":
         try:
             print(response.header.get("X-Request-Id"))
         except Exception as e:
+            print("reem")
             pass
