@@ -5,13 +5,11 @@ request(process.argv[2], function (error, response, body) {
     console.error(error);
     return;
   }
-  let count = 1;
-	let res = {};
+  const res = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 8: 0, 9: 0, 10: 0 };
   const tasks = JSON.parse(response.body);
   for (let i = 0; i < tasks.length; i++) {
     if (tasks[i].completed) {
-      res[`${count}`] = tasks[i].id;
-      count = count + 1;
+      res[tasks[i].userId] = res[tasks[i].userId] + 1;
     }
   }
   console.log(res);
